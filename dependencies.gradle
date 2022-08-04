@@ -1,0 +1,74 @@
+ext {
+    buildToolsVersion = '29.0.2'
+    compileSdkVersion = 30
+    minSdkVersion = 21
+    targetSdkVersion = 30
+
+    //kotlin core
+    kotlinVersion = '1.4.32'
+    kotlinKtxVersion = '1.3.2'
+    fragmentKtxVersion = '1.3.3'
+    androidKtxVersion = '1.2.3'
+    viewmodelKtxVersion = '2.5.1'
+    lifecycleExtensionsVersion = '2.2.0'
+
+    //retrofit
+    retrofitVersion = '2.9.0'
+    okhttp3Version = '4.9.1'
+    gsonVersion = '2.9.0'
+    rxAndroidVersion = '2.1.1'
+    rxkotlinVersion = '2.4.0'
+    rxPermissionVersion = '0.12'
+
+    //hilt version
+    hiltVersion = '2.35'
+    //insider version
+    insiderVersion = '12.0.0-nh'
+    //javax
+    javaxVersion = '1'
+    //annotation support
+    annotationVersion = '1.2.0'
+    //custom view
+    stepperPercentVersion = '0.0.12'
+
+    versions = [
+        minSdkVersion    : minSdkVersion,
+        compileSdkVersion: compileSdkVersion,
+        buildToolsVersion: buildToolsVersion,
+        targetSdkVersion : targetSdkVersion,
+
+        spotlessGradle   : '5.12.4',
+        ktlintGradle     : '0.41.0',
+        dokkaGradle      : '1.4.30',
+        mavenPublish     : '0.15.1',
+        androidxAppcompat: '1.2.0',
+    ]
+
+    appDependencies = [
+        //kotlin core
+        kotlinstdlib      : "org.jetbrains.kotlin:kotlin-stdlib:${kotlinVersion}",
+        kotlinKtx         : "androidx.core:core-ktx:${kotlinKtxVersion}",
+        fragmentKtx       : "androidx.fragment:fragment-ktx:${fragmentKtxVersion}",
+        androidKtx        : "androidx.activity:activity-ktx:${androidKtxVersion}",
+        viewmodelKtx      : "androidx.lifecycle:lifecycle-viewmodel-ktx:${viewmodelKtxVersion}",
+        lifecycleExtension: "androidx.lifecycle:lifecycle-extensions:${lifecycleExtensionsVersion}",
+
+        //retrofit
+        retrofit          : "com.squareup.retrofit2:retrofit:${retrofitVersion}",
+        retrofitConverter : "com.squareup.retrofit2:converter-gson:$retrofitVersion",
+        retrofitAdapter   : "com.squareup.retrofit2:adapter-rxjava2:$retrofitVersion",
+        okhttp            : "com.squareup.okhttp3:okhttp:${okhttp3Version}",
+        gson              : "com.google.code.gson:gson:${gsonVersion}",
+        loggingInterceptor: "com.squareup.okhttp3:logging-interceptor:${okhttp3Version}",
+
+        //hilt dependencies
+        hilt              : "com.google.dagger:hilt-android:${hiltVersion}",
+        hiltCompiler      : "com.google.dagger:hilt-android-compiler:${hiltVersion}",
+
+        // rx android
+        rxKotlin          : "io.reactivex.rxjava2:rxkotlin:${rxkotlinVersion}",
+        rxAndroid         : "io.reactivex.rxjava2:rxandroid:${rxAndroidVersion}",
+        rxPermission      : "com.github.tbruyelle:rxpermissions:${rxPermissionVersion}",
+    ]
+}
+
