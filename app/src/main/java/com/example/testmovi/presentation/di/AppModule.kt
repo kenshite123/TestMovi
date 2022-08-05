@@ -8,5 +8,5 @@ import org.koin.dsl.module
 val appModule = module {
     single { Gson() }
 
-    viewModel { MainViewModel(get()) }
+    viewModel { MainViewModel(get(), get()) }
 }

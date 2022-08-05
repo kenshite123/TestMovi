@@ -5,5 +5,5 @@ import com.example.testmovi.domain.repository.WeatherRepository
 import org.koin.dsl.module
 
 val repositoryModule = module {
-    single { WeatherRepositoryImpl(get(), get()) }
+    single { WeatherRepositoryImpl(get(), get(), get()) as WeatherRepository }
 }

@@ -1,4 +1,4 @@
-package com.example.testmovi.util
+package com.example.testmovi.ext
 
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment

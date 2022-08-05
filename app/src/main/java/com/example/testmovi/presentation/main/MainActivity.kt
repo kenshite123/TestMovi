@@ -1,16 +1,11 @@
 package com.example.testmovi.presentation.main
 
-import android.Manifest
-import android.content.Context
-import android.location.LocationManager
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.example.testmovi.R
 import com.example.testmovi.databinding.ActivityMainBinding
 import com.example.testmovi.presentation.base.BaseActivity
-import com.example.testmovi.util.replaceFragment
-import com.tbruyelle.rxpermissions3.RxPermissions
+import com.example.testmovi.ext.replaceFragment
 
 class MainActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
