@@ -38,10 +38,14 @@ class ForecastAdapter(
         fun bindData(item: WeatherList) {
             val context = parent.context
             viewBinding.date.text = context.getString(R.string.date, HumanUtil.displayDate(item.dt))
-            viewBinding.temperature.text = context.getString(R.string.temperature, item.temp?.eve?.toString())
-            viewBinding.humidity.text = context.getString(R.string.humidity, "${item.humidity}")
-            viewBinding.pressure.text = context.getString(R.string.pressure, item.pressure?.toString())
-            viewBinding.description.text = context.getString(R.string.description, item.weather?.getOrNull(0)?.description)
+            viewBinding.temperature.text =
+                context.getString(R.string.temperature, item.temp?.eve?.toString())
+            viewBinding.humidity.text =
+                context.getString(R.string.humidity, (item.humidity ?: 0).toString())
+            viewBinding.pressure.text =
+                context.getString(R.string.pressure, item.pressure?.toString())
+            viewBinding.description.text =
+                context.getString(R.string.description, item.weather?.getOrNull(0)?.description)
         }
     }
 }

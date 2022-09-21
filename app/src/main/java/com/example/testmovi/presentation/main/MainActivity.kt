@@ -14,7 +14,7 @@ class MainActivity : BaseActivity() {
             DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.lifecycleOwner = this
 
-        startLocationService()
+//        startLocationService()
 
         val fragment = supportFragmentManager.findFragmentByTag(MainFragment.TAG)
         if (fragment == null) {
